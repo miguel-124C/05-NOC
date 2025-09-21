@@ -10,7 +10,6 @@ export class LogRepositoryImpl implements LogRepository {
     private readonly logDatasource: LogDatasource, //<--- 
   ) {}
 
-
   async saveLog( log: LogEntity ): Promise<void> {
     return this.logDatasource.saveLog( log );
   }

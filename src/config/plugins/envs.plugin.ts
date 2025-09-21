@@ -15,7 +15,3 @@ export const envs = {
   MONGO_USER: env.get('MONGO_USER').required().asString(),
   MONGO_PASS: env.get('MONGO_PASS').required().asString(),
 }
-
-
-
-

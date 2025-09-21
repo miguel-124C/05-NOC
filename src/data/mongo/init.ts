@@ -11,13 +11,11 @@ export class MongoDataBase {
         const { mongoUrl, dbName } = options;
 
         try{
-        
             await mongoose.connect(mongoUrl, { dbName });
-
             console.log('Mongo Conected!');
-            
         }catch( error ){
-        
+            console.log('Mongo connection error');
+            throw error;
         }
     }    
 

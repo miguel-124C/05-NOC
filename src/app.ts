@@ -1,5 +1,6 @@
 import { envs } from './config/plugins/envs.plugin';
-import { MongoDataBase } from './data/mongo';
+import { LogModel, MongoDataBase } from './data/mongo';
+import { PrismaClient } from './generated/prisma';
 import { Server } from './presentation/server';
 
 
@@ -17,7 +18,5 @@ async function main(){
     mongoUrl: envs.MONGO_URL
   });
 
-  // Server.start();
+  Server.start();
 }
-
-
